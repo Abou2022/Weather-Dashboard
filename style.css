@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* background: rgb(129, 129, 239); */
+}
+header {
+  display: flex;
+  background: rgb(45, 45, 236);
+  color: white;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+.draggable {
+  width: 90px;
+  height: 80px;
+  padding: 5px;
+  float: left;
+  margin: 0 10px 10px 0;
+  font-size: 0.9em;
+  background-color: rgb(64, 64, 233);
+}
+.ui-widget-header p,
+.ui-widget-content p {
+  margin: 0;
+}
+#snaptarget {
+  height: 140px;
+}
+.container-fluid {
+  display: flex;
+  margin-top: 2rem;
+}
+.searchbar {
+  border: 2px solid black;
+}
