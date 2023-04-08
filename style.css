@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 
-  /* background: rgb(129, 129, 239); */
+
 }
 header {
   display: flex;
@@ -19,7 +19,7 @@ header {
   float: left;
   margin: 0 10px 10px 0;
   font-size: 0.9em;
-  background-color: rgb(64, 64, 233);
+  
 }
 .ui-widget-header p,
 .ui-widget-content p {
@@ -34,4 +34,94 @@ header {
 }
 .searchbar {
   border: 2px solid black;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background: rgb(45, 45, 236);
+  color: white;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable {
+  width: 90px;
+  height: 80px;
+  padding: 5px;
+  float: left;
+  margin: 0 10px 10px 0;
+  font-size: 0.9em;
+}
+
+.ui-widget-header p,
+.ui-widget-content p {
+  margin: 0;
+}
+
+#snaptarget {
+  height: 140px;
+}
+
+.container-fluid {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.searchbar {
+  border: 2px solid black;
+}
+/* CSS for mobile devices */
+@media screen and (max-width: 767px) {
+  /* adjust font sizes */
+  h1,
+  h2,
+  h3,
+  p {
+    font-size: 16px;
+  }
+
+  /* make the search input full width */
+  #input {
+    width: 100%;
+  }
+
+  /* adjust padding and margins */
+  .col-lg-6 {
+    padding: 10px;
+  }
+
+  /* stack the columns */
+  #history,
+  #weather,
+  #forecast {
+    margin-top: 20px;
+  }
+}
+
+/* CSS for tablet and desktop devices */
+@media screen and (min-width: 768px) {
+  /* adjust font sizes */
+  h1,
+  h2,
+  h3,
+  p {
+    font-size: 24px;
+  }
+
+  /* adjust padding and margins */
+  .col-lg-6 {
+    padding: 20px;
+  }
+
+  /* adjust the width of the search input */
+  #input {
+    width: 80%;
+  }
 }
