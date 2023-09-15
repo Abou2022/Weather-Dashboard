@@ -5,11 +5,13 @@ h2,
 h3,
 p,
 input,
-button {
+button,
+a {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  text-decoration: none;
 }
 
 /* Define background color and spacing for the entire page */
@@ -87,6 +89,14 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
 /* Add responsive styles for smaller screens */
