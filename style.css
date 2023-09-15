@@ -1,99 +1,100 @@
-* {
+/* Reset some default styles and apply a base font size */
+body,
+h1,
+h2,
+h3,
+p,
+input,
+button {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
-html,
+
+/* Define background color and spacing for the entire page */
 body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-#weather,
-#history {
-  max-width: 100%;
-  overflow: auto;
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
+/* Style the header */
 header {
-  display: flex;
-  background: rgb(45, 45, 236);
-  color: white;
-  height: 6rem;
-  justify-content: center;
-  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
-.draggable {
-  width: 90px;
-  height: 80px;
-  padding: 5px;
-  float: left;
-  margin: 0 10px 10px 0;
-  font-size: 0.9em;
-}
-
-.ui-widget-header p,
-.ui-widget-content p {
-  margin: 0;
-}
-
-#snaptarget {
-  height: 140px;
-}
-
+/* Style the main container */
 .container-fluid {
-  display: flex;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
-.searchbar {
-  border: 2px solid black;
+/* Style the left column */
+.col-lg-6 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* CSS for mobile devices */
-@media screen and (max-width: 767px) {
-  /* adjust font sizes */
-  h1,
-  h2,
-  h3,
-  p {
-    font-size: 16px;
-  }
 
-  /* make the search input full width */
-  #input {
-    width: 100%;
-  }
+/* Style the search input and button */
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  /* adjust padding and margins */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Style the right column */
+#weather {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.city {
+  font-size: 24px;
+}
+
+/* Style the weather details */
+.temp,
+.wind,
+.humi,
+.uv {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style the 5-day forecast */
+#forecast {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
   .col-lg-6 {
     padding: 10px;
   }
-
-  /* stack the columns */
-  #history,
-  #weather,
-  #forecast {
-    margin-top: 20px;
-  }
-}
-
-/* CSS for tablet and desktop devices */
-@media screen and (min-width: 768px) {
-  /* adjust font sizes */
-  h1,
-  h2,
-  h3,
-  p {
-    font-size: 24px;
-  }
-
-  /* adjust padding and margins */
-  .col-lg-6 {
-    padding: 20px;
-  }
-
-  /* adjust the width of the search input */
-  #input {
-    width: 80%;
+  .btn-primary {
+    font-size: 14px;
   }
 }
