@@ -111,7 +111,13 @@ footer {
   text-align: center;
   padding: 25px;
 }
-
+footer p {
+  font-size: 25px;
+}
+footer a {
+  font-size: 25px;
+  align-items: center;
+}
 /* Add responsive styles for smaller screens */
 @media (max-width: 768px) {
   .col-lg-6 {
