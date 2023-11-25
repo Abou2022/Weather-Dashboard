@@ -12,6 +12,7 @@ a {
   font-size: 16px;
   text-decoration: none;
 }
+
 h1 {
   font-size: 50px;
 }
@@ -39,11 +40,12 @@ header {
 }
 
 /* Style the left column */
-.col-lg-6 {
+.col-lg-6.left-column {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 25%;
 }
 
 /* Style the search input and button */
@@ -66,16 +68,18 @@ header {
 }
 
 /* Style the right column */
-#weather {
+.col-lg-6.right-column {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  width: 75%;
 }
 
+/* Style the weather details */
 .city {
   font-size: 24px;
+  width: 100%;
 }
 
 /* Style the weather details */
@@ -94,6 +98,19 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+
+/* Style each day in the forecast */
+.forecast-day {
+  flex: 0 0 auto;
+  width: 150px; /* Adjust as needed */
+  margin-right: 10px; /* Adjust spacing between days */
+  background-color: #f0f0f0; /* Background color for each day */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 /* Style the footer */
@@ -106,9 +123,11 @@ footer {
   text-align: center;
   padding: 25px;
 }
+
 footer p {
   font-size: 25px;
 }
+
 footer a {
   font-size: 25px;
   align-items: center;
@@ -116,11 +135,9 @@ footer a {
 
 /* Add responsive styles for smaller screens */
 @media (max-width: 992px) {
-  .col-lg-6 {
-    padding: 10px;
-  }
-  .btn-primary {
-    font-size: 14px;
+  .col-lg-6.left-column,
+  .col-lg-6.right-column {
+    width: 100%;
   }
 }
 
@@ -128,7 +145,8 @@ footer a {
   header {
     padding: 20px;
   }
-  .col-lg-6 {
+  .col-lg-6.left-column,
+  .col-lg-6.right-column {
     padding: 10px;
   }
   .btn-primary {
@@ -141,7 +159,8 @@ footer a {
     padding: 10px;
     font-size: 24px;
   }
-  .col-lg-6 {
+  .col-lg-6.left-column,
+  .col-lg-6.right-column {
     padding: 10px;
   }
   .btn-primary {
