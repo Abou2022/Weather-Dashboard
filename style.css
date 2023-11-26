@@ -1,5 +1,6 @@
 /* Reset some default styles and apply a base font size */
 body,
+h1,
 h2,
 h3,
 p,
@@ -8,28 +9,21 @@ button,
 a {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   text-decoration: none;
+  color: #333; /* Default text color */
 }
 
 h1 {
-  font-size: 50px;
-}
-
-/* Define background color and spacing for the entire page */
-body {
-  background-image: url("./Assets/weather.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 20px;
+  font-size: 36px; /* Larger font size for the main title */
+  margin-bottom: 20px; /* Add space below the main title */
 }
 
 /* Style the header */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #007bff; /* Primary color for the header */
+  color: #fff; /* Text color for the header */
   text-align: center;
   padding: 50px;
 }
@@ -40,12 +34,11 @@ header {
 }
 
 /* Style the left column */
-.col-lg-6.left-column {
-  background-color: #fff;
+.left-column {
+  background-color: #fff; /* White background for left column */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 25%;
 }
 
 /* Style the search input and button */
@@ -68,21 +61,19 @@ header {
 }
 
 /* Style the right column */
-.col-lg-6.right-column {
-  background-color: #fff;
+.right-column {
+  background-color: #fff; /* White background for right column */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 75%;
 }
 
 /* Style the weather details */
 .city {
   font-size: 24px;
-  width: 100%;
+  margin-bottom: 10px;
 }
 
-/* Style the weather details */
 .temp,
 .wind,
 .humi,
@@ -93,48 +84,53 @@ header {
 
 /* Style the 5-day forecast */
 #forecast {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   background-color: #fff;
-  padding: 10px; /* Reduce overall padding */
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  overflow-x: auto; /* Allow horizontal scrolling if necessary */
 }
 
 /* Style each day in the forecast */
 .forecast-day {
-  display: inline-block;
+  flex: 0 0 auto;
   width: 120px; /* Adjust the width to make all days fit */
-  margin-right: 5px; /* Reduce spacing between days */
+  margin-right: 10px; /* Reduce spacing between days */
   background-color: #f0f0f0; /* Background color for each day */
   padding: 10px;
   border-radius: 5px;
   text-align: center;
 }
+
+/* Style the footer */
 /* Style the footer */
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 25px;
+  position: fixed;
+  bottom: 0;
 }
 
 footer p {
-  font-size: 25px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 footer a {
-  font-size: 25px;
-  align-items: center;
+  font-size: 16px;
+  margin: 0 10px;
 }
 
 /* Add responsive styles for smaller screens */
 @media (max-width: 992px) {
-  .col-lg-6.left-column,
-  .col-lg-6.right-column {
+  .left-column,
+  .right-column {
     width: 100%;
   }
 }
@@ -143,8 +139,8 @@ footer a {
   header {
     padding: 20px;
   }
-  .col-lg-6.left-column,
-  .col-lg-6.right-column {
+  .left-column,
+  .right-column {
     padding: 10px;
   }
   .btn-primary {
@@ -157,8 +153,8 @@ footer a {
     padding: 10px;
     font-size: 24px;
   }
-  .col-lg-6.left-column,
-  .col-lg-6.right-column {
+  .left-column,
+  .right-column {
     padding: 10px;
   }
   .btn-primary {
