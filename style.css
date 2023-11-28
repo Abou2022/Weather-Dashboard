@@ -35,7 +35,7 @@ header {
 
 /* Style the left column */
 .left-column {
-  background-color: #fff; /* White background for left column */
+  background-color: #fff; /* White background for the left column */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@ header {
 
 /* Style the right column */
 .right-column {
-  background-color: #fff; /* White background for right column */
+  background-color: #fff; /* White background for the right column */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -85,19 +85,18 @@ header {
 /* Style the 5-day forecast */
 #forecast {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  overflow-x: auto;
 }
 
 /* Style each day in the forecast */
 .forecast-day {
   flex: 0 0 auto;
-  width: 120px; /* Adjust the width to make all days fit */
+  min-width: 120px; /* Set a minimum width to prevent compression */
   margin-right: 10px; /* Reduce spacing between days */
   background-color: #f0f0f0; /* Background color for each day */
   padding: 10px;
@@ -105,7 +104,6 @@ header {
   text-align: center;
 }
 
-/* Style the footer */
 /* Style the footer */
 footer {
   width: 100%;
