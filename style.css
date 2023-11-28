@@ -83,6 +83,9 @@ header {
 }
 
 /* Style the 5-day forecast */
+/* Style the 5-day forecast */
+/* Style the 5-day forecast */
+/* Style the 5-day forecast */
 #forecast {
   display: flex;
   background-color: #fff;
@@ -90,20 +93,25 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  overflow-x: auto;
+  overflow: auto; /* Allow overflow for smaller screens */
+  max-width: 100%; /* Ensure it doesn't exceed the screen width */
 }
 
 /* Style each day in the forecast */
 .forecast-day {
   flex: 0 0 auto;
-  min-width: 120px; /* Set a minimum width to prevent compression */
-  margin-right: 10px; /* Reduce spacing between days */
-  background-color: #f0f0f0; /* Background color for each day */
+  width: 120px;
+  margin-right: 10px;
+  background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
 }
-
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66667%;
+  max-width: 16.66667%;
+}
 /* Style the footer */
 footer {
   width: 100%;

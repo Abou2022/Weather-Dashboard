@@ -67,8 +67,11 @@ function weather(input) {
       var temp = $("<p>").text("Temp: " + data.main.temp + " ℉");
       var wind = $("<p>").text("Wind: " + data.wind.speed + " MPH");
       var humidity = $("<p>").text("Humidity: " + data.main.humidity + " %");
+      var feels_like = $("<p>").text(
+        "Feels Like: " + data.main.feels_like + " ℉"
+      );
 
-      $("#weather").append(city, icon, temp, wind, humidity);
+      $("#weather").append(city, icon, temp, wind, humidity, feels_like);
 
       var lat = data.coord.lat;
       var lon = data.coord.lon;
@@ -113,6 +116,9 @@ function forecast(lat, lon) {
         var humidity = $("<p>")
           .addClass("text-white px-2 pb-2")
           .text("Humidity: " + data.daily[i].humidity + " %");
+        var feels_like = "<p>"
+          .addClass("text-white px-2 pb-2")
+          .text("Wind: " + data.daily[i].feels_like + " ℉");
         var iconLink =
           "http://openweathermap.org/img/wn/" +
           data.daily[i].weather[0].icon +
@@ -129,7 +135,7 @@ function forecast(lat, lon) {
         $("#forecast").append(div);
         $(div).append(col);
         $(col).append(box);
-        $(box).append(date, icon, temp, wind, humidity);
+        $(box).append(date, icon, temp, wind, humidity, feels_like);
       }
     });
 }
