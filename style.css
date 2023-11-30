@@ -121,15 +121,15 @@ footer {
   bottom: 0;
 }
 
-footer p {
+/* footer p {
   font-size: 16px;
   margin-bottom: 10px;
-}
+} */
 
-footer a {
+/* footer a {
   font-size: 16px;
   margin: 0 10px;
-}
+} */
 
 /* Add responsive styles for smaller screens */
 @media (max-width: 992px) {
